@@ -1,0 +1,209 @@
+/* ******************
+   importing fonts
+******************* */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #E5E5E5;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+/* *************************************
+            navigation bar
+*************************************** */
+#navBar{
+    background: #562EFF;
+}
+#navBar #nav{
+    padding: 20px 0;
+    width: 870px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+#nav .navItem.logo{
+    margin-right: auto;
+}
+#nav .navItem.logo a{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: 500;
+    font-size: 24px;
+}
+#nav .navItem.logo img{
+    width: 40px;
+    height: 51px;
+    vertical-align: middle;
+}
+.navItem a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.navItem #profileImage{
+    vertical-align: middle;
+}
+/* **************************
+            nav bar end
+***************************** */
+.container{
+    width: 870px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 5px;
+}
+.container .sectionTitle{
+    grid-column: 1 / -1;
+    color: #562EFF;
+    font-weight: 500;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+.topPlayers{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap: 30px;
+}
+.topPlayers .player{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: #f3f2f2;
+}
+.player img{
+    width: 56px;
+    height: 56px;
+    margin-left: 20px;
+}
+.player .playerName{
+    font-family: 'Poppins';
+    line-height: 27px;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+hr{
+    margin: 30px 0;
+}
+.topBlogs{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 26px;
+    grid-column-gap: 30px;
+}
+.topBlogs .blog{
+    display: flex;
+gap: 16px;
+color: #000000;
+}
+.blog img{
+    width: 177px;
+    height: 117px;
+}
+.blog h3{
+    font-size: 20px;
+}
+.blog .blogerName{
+    color: #562EFF;
+}
+.blog .blogerName span{
+    color: #9F9F9F;
+}
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+}
+.course{
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, .3);
+    border-radius: 6px;
+    text-align: center;
+    padding: 12px;
+}
+.course img{
+    width: 224px;
+    height: 104px;
+}
+.course h3{
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 23px;
+    margin: 15px 0;
+    
+}
+.course .reviews{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+.course .rating{
+    background-color: #E5E5E5;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+.fa-star{
+    color: goldenrod;
+}
+.fa-star:last-child{
+    color: lightgrey;
+}
+.time-duration{
+    background: #FFE4E8;
+    border-radius: 15px;
+    color: #FF4A60;
+    padding: 5px 10px;
+    flex-wrap: wrap;
+}
+@media only screen and (max-width: 576px){
+    .topPlayers,.topBlogs,.courses{
+        grid-template-columns: 1fr;
+    }
+    #nav,.logo a{
+        flex-wrap: wrap;
+    }
+}
+@media only screen and (min-width:576px) and (max-width: 768px){
+    .topPlayers{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .courses{
+        grid-template-columns: 1fr;
+    }
+    .course .reviews{
+        gap: 20px;
+        font-size: 16px;
+    }
+    .reviews > *{
+        flex-basis: 50%;
+    }
+
+}
+@media only screen and (max-width: 992px) {
+    .container,#navBar #nav{
+        width: 100%;
+        margin: 0;
+        padding: 30px;
+    }
+    .container{
+        margin-bottom: 2rem;
+    }
+    .course img,.blog img{
+        width: 100%;
+        height: auto;
+    }
+    .blog{
+        flex-direction: column;
+    }
+}
